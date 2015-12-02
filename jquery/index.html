@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery Prac</title>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<style type="text/css">
+	#circle{
+		width: 200px;
+		height: 200px;
+		background-color:green;
+		border-radius: 100px;
+	}
+	#close{
+		width: 10px;
+		height: 10px;
+		background-color: black;
+		border-radius: 2px;
+	}
+	.square{
+		width: 200px;
+		height: 200px;
+		background-color:red;
+		margin-top: 20px;
+	}
+	#button{
+		width: 150px;
+		height: 50px;
+		background-color: #239834;
+
+	}
+	}
+	#frame{
+		width: 450px;
+		height: 450px;
+		}
+
+
+</style>
+</head>
+<body>
+<div id="circle"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div id="close"></div>
+<div id="textview">
+	<p>1</p>
+</div>
+<div id="button">Click me</div>
+<iframe id="frame" src="http://www.google.com" ></iframe>
+<script>
+$("#button").click(function(){
+$("#frame").attr("src","http://www.cnn.com");
+});
+
+
+
+
+$("#textview").hover(function(){
+var a=$("p").html();
+console.log(a);
+a=parseInt(a);
+a=a+1;
+$("p").html(a);
+
+});
+
+
+
+
+	$("#circle").click(function(){
+		console.log("Hello circle");
+		$("#circle").animate({
+		width: "400px",
+		height: "400px",
+		backgroundColor:"#2f342f",
+		borderRadius: "200px",
+		marginTop:"30px",
+		marginLeft:"30px"
+		},1500);
+	});
+	
+	$(".square").click(function(){
+		console.log("Hello square");
+
+		function recursive () {
+		$(".square").fadeOut(2000,function(){
+			$(".square").fadeIn(2000,function(){
+				recursive();
+			});
+		});
+		}
+	recursive();
+	});
+	
+
+
+
+	$("div").click(function () {
+		console.log("Div Count");
+		console.log($(this).css("width"));
+	});
+	$("#close").click(function(){
+window.close();
+	});
+
+</script>
+
+
+
+</body>
+</html>
