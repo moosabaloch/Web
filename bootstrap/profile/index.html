@@ -39,6 +39,9 @@ body
 .contentContainer{
 
 }
+.jumper{
+
+}
 
 #topRow{
 	margin-top: 100px;
@@ -69,7 +72,7 @@ font-size: 300%;
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
        <li><a href="#">Intro</a></li>
-            <li><a href="#">Expertise</a></li>
+            <li><a class="jumper" href="#div2">Expertise</a></li>
             <li><a href="#">Education</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Hire Me</a></li>
@@ -102,7 +105,7 @@ font-size: 300%;
 		</div>
 	</div>
 </div>
-<div class="container contentContainer">
+<div class="container contentContainer" id="div2">
 Hello Second Container
 </div>
 
@@ -119,8 +122,21 @@ Hello Second Container
    
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
+    /////////////////////////////////
 var windowHeight=$(window).height();
 $(".contentContainer").css("min-height",windowHeight+"px");
+//////////////////////////////////////
+$(document).ready(function() {
+    $(".jumper").on("click", function( e ) {
+
+        e.preventDefault();
+
+        $("body, html").animate({ 
+            scrollTop: $( $(this).attr('href') ).offset().top 
+        }, 600);
+
+    });
+});
     </script>
 <script>
         $(function(){

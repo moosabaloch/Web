@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<title>Section Wipes (manual) - Examples - ScrollMagic</title>
+
+	<link rel="stylesheet" href="style.css" type="text/css">
+	
+	<script type="text/javascript" src="jquery.min.js"></script>
+	
+	<script type="text/javascript" src="TweenMax.min.js"></script>
+	<script type="text/javascript" src="ScrollMagic.js"></script>
+	<script type="text/javascript" src="animation.gsap.js"></script>
+	</head>
+<body style="{margin:0px}">
+	<style type="text/css">
+	#pinContainer {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.panel {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	}
+	.turqoise{
+		background-color: yellow;
+	}
+	.green{
+		background-color: green;
+	}
+
+	.blue{
+
+		background-color: blue;
+	}
+		.bordeaux{
+		background-color: red;
+	}
+
+</style>
+<div id="pinContainer">
+	<section class="panel blue">
+		<b>ONE</b>
+	</section>
+	<section class="panel turqoise">
+		<b>TWO</b>
+	</section>
+	<section class="panel green">
+		<b>THREE</b>
+	</section>
+	<section class="panel bordeaux">
+		<b>FOUR</b>
+	</section>
+</div>
+<script>
+	$(function () { // wait for document ready
+		// init
+		var controller = new ScrollMagic.Controller();
+
+		// define movement of panels
+		var wipeAnimation = new TimelineMax()
+			.fromTo("section.panel.turqoise", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
+			.fromTo("section.panel.green",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+			.fromTo("section.panel.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
+
+		// create scene to pin and link animation
+		new ScrollMagic.Scene({
+				triggerElement: "#pinContainer",
+				triggerHook: "onLeave",
+				duration: "300%"
+			})
+			.setPin("#pinContainer")
+			.setTween(wipeAnimation)
+			.addTo(controller);
+	});
+</script>
+</body>
+</html>
