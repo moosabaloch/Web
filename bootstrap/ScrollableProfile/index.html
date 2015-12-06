@@ -1,159 +1,325 @@
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-	<title>Section Wipes (manual) - Examples - ScrollMagic</title>
+    <title>Section Wipes (manual) - Examples - ScrollMagic</title>
 
-	<link rel="stylesheet" href="style.css" type="text/css">
-	
-	<script type="text/javascript" src="jquery.min.js"></script>
-	 <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
 
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/animations.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="main.css">
-   
-	<script type="text/javascript" src="TweenMax.min.js"></script>
-	<script type="text/javascript" src="ScrollMagic.js"></script>
-	<script type="text/javascript" src="animation.gsap.js"></script>
-	</head>
+
+    <script type="text/javascript" src="TweenMax.min.js"></script>
+    <script type="text/javascript" src="ScrollMagic.js"></script>
+    <script type="text/javascript" src="animation.gsap.js"></script>
+</head>
 <body style="{margin:0px}">
-	<style type="text/css">
-	#pinContainer {
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-	}
-	.panel {
-		height: 100%;
-		width: 100%;
-		position: absolute;
-	}
-	.turqoise{
-		background-color: yellow;
-	}
-	.green{
-		background-color: green;
-	}
+<style type="text/css">
+    #pinContainer {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 
-	.blue{
+    .panel1 {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
 
-		background-color: blue;
-	}
-		.bordeaux{
-		background-color: red;
-	}
+   
+table{
+  font-size: 70%;
+
+}
+
+#textmin{
+font-size: 70%;
+}
+    h2 {
+        text-align: center;
+       
+    }
+
+    .blue {
+
+        background-color: blue;
+    }
+
+    .bordeaux {
+        background-color: red;
+    }
+
+    .navbar-brand {
+        font-size: 1.8em;
+    }
+
+    #topContainer {
+        background: url("bg.png");
+        background-size: cover;
+
+    }
+
+.circle {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 1em auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
+}
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(
+                black, white
+        );
+    }
+
+    #topRow {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    #topRow h1 {
+        font-size: 300%;
+    }
+    #div2{
+        height: 100%;
+    }
 
 </style>
-  <style type="text/css">
-.navbar-brand{
-	font-size: 1.8em;
-}
-#topContainer{
-	background: url("bg.png");
-	background-size:cover;
-	
-}
-body
-{
-   margin:  0;
-   padding: 0;
-    background-image:
-    linear-gradient(
-      black, white
-    );
-}
-
-#topRow{
-	margin-top: 100px;
-	text-align: center;
-}
-#topRow h1{
-font-size: 300%;
-}
-
-    </style>
 
 <div id="pinContainer">
-	<section class="panel blue container contentContainer" id="topContainer">
-			
-	<div class="row">
-		<div class="col-md-6 col-md-offset" id="topRow">
-	<div class="embed-responsive embed-responsive-16by9">
-  
-    <div class="text-editor-wrap embed-responsive-item">
-      <div class="title-bar"><span class="title">moosa@linux &mdash; Terminal &mdash; 80x<span class="terminal-height">25</span></span></div>
-      <div class="text-body">
-      <div class="holder">
-          <span id="story"></span>
-          <div id="kick"></div>
-      </div>
-    </div>
-</div>
-</div>	</div>
-		<div class="col-md-8 col-md-offset" id="topRow">
-			
-		</div>
-	</div>
+    <section class="panel1 blue container contentContainer animatedParent" id="topContainer">
 
-	</section>
-	<section class="panel turqoise">
-		<b>TWO</b>
-	</section>
-	<section class="panel green">
-		<b>THREE</b>
-	</section>
-	<section class="panel bordeaux">
-		<b>FOUR</b>
-	</section>
+        <div class="row">
+            <div class="col-md-6 col-md-offset animated shakeUp slow" id="topRow">
+                <div class="embed-responsive embed-responsive-16by9">
+
+                    <div class="text-editor-wrap embed-responsive-item">
+                        <div class="title-bar"><span class="title">moosa@linux &mdash; Terminal &mdash; 80x<span
+                                class="terminal-height">25</span></span></div>
+                        <div class="text-body">
+                            <div class="holder">
+                                <span id="story"></span>
+
+                                <div id="kick"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset" id="topRow">
+
+            </div>
+        </div>
+
+    </section>
+    <section class="panel1 turqoise" id="myTechExpertise">
+
+        <div class="jumbotron animatedParent" style="height:100%">
+            <div class="container contentContainer" id="div2">
+
+
+                <div class="starter-template animated fadeInDown slow">
+                    <h2>My Technical Expertise</h2>
+                </div>
+                <div class="col-md-8 col-md-offset ">
+                    <div class="progress animated fadeInDown slow">
+                        <div class="progress-bar progress-bar-striped active progress-bar-danger" role="progressbar"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                            Android
+                        </div>
+                    </div>
+                     <div class="progress  animated bounceInRight slow">
+                        <div class="progress-bar progress-bar-striped active progress-bar-warning" role="progressbar"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                            Java
+                        </div>
+                    </div>
+                     <div class="progress  animated rotateIn slow">
+                        <div class="progress-bar progress-bar-striped active progress-bar-info" role="progressbar"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:83%">
+                            JavaScript
+                        </div>
+                    </div>
+                     <div class="progress  animated flipInX slow">
+                        <div class="progress-bar progress-bar-striped active progress-bar-success" role="progressbar"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:79%">
+                            HTML n CSS
+                        </div>
+                    </div>
+                     <div class="progress  animated flipInY slow">
+                        <div class="progress-bar progress-bar-striped active progress-bar" role="progressbar"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                            C#
+                        </div>
+                    </div>
+                     <div class="progress  animated growIn slow">
+                        <div class="progress-bar progress-bar-striped active progress-bar-danger" role="progressbar"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:57%">
+                            MySQL / SQLite
+                        </div>
+                    </div>
+                    <div class="progress  animated fadeIn slow">
+                        <div class="progress-bar progress-bar-striped active progress-bar-info" role="progressbar"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:79%">
+                            Node.js / Express.js
+                        </div>
+                    </div>
+                    <div class="progress animated fadeInRight slow">
+                        <div class="progress-bar progress-bar-striped active progress-bar-warning" role="progressbar"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:84%">
+                             Angular.js
+                        </div>
+                    </div>
+                    <div class="progress animated fadeInLeft slow">
+                        <div class="progress-bar progress-bar-striped active progress-bar-success" role="progressbar"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:76%">
+                            MongoDB / NoSQL
+                        </div>
+                    </div>
+                    <div class="progress animated fadeInUp slow">
+                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40"
+                             aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                              Wordpress
+                        </div>
+                    </div>
+                   
+                </div>
+
+
+                <div class="col-md-4 col-md-offset  animated wiggle slow" >
+                   <p class="lead" > I am familiar with C, Java , C#,  Android, HTML5, CSS3, Bootstrap, jQuery, JavaScript, 
+                   Jquery, Node js, PHP, Express, Angular along with databases such as
+                    MySQL, SQLite, SQLServer, NoSQL and many other upcoming technologies and frameworks.
+                </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="panel1 green">
+       
+<div class="jumbotron animatedParent"  style="height:100%">
+<div class="container contentContainer" id="div2">
+ 
+ <div class="col-md-8 col-md-offset" >
+<div class="panel panel-primary animated wiggle slow">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Education</div>
+  <table class="table">
+<tr class="selected"><th>#</th><th>Degree</th><th>Field</th><th>Year</th></tr>   
+<tr><td>01</td><td>Bachelor</td><td>Computer Science</td><td>Enrolled</td></tr>   
+<tr><td>02</td><td>Intermediate</td><td>Pre-Engineering</td><td>2012</td></tr>   
+<tr><td>03</td><td>Matriculation</td><td>Science</td><td>2010</td></tr>   
+  </table>
+</div>
+    
+<div class="panel panel-primary  animated swing slow">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Courses</div>
+  <table class="table">
+<tr class="selected"><th>#</th><th>Title</th><th>Institute</th><th>Year</th></tr>   
+<tr><td>01</td><td>Android Native</td><td>SWIT</td><td>2015</td></tr>   
+<tr><td>02</td><td>Java, Php, C#, Js...</td><td>Online</td><td>2014</td></tr>   
+<tr><td>03</td><td>MEAN Development</td><td>Online</td><td>2015</td></tr>   
+  </table>
+</div>
+    </div>
+
+ <div class="col-md-4 col-md-offset" >
+ <div class="circle animated flip slow" style="background-image: 
+       url('http://img.labnol.org/di/bo.jpg')">
+</div>
+ 
+
+</div>
+
+</div></div>
+
+    </section>
+    <section class="panel1 bordeaux">
+        <b>FOUR</b>
+    </section>
 </div>
 <script>
-	$(function () { // wait for document ready
-		// init
-		var controller = new ScrollMagic.Controller();
+    $(function () { // wait for document ready
+        // init
+        var controller = new ScrollMagic.Controller();
 
-		// define movement of panels
-		var wipeAnimation = new TimelineMax()
-			.fromTo("section.panel.turqoise", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-			.fromTo("section.panel.green",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-			.fromTo("section.panel.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
+        // define movement of panels
+        var wipeAnimation = new TimelineMax()
+                .fromTo("section.panel1.turqoise", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
+                .fromTo("section.panel1.green", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+                .fromTo("section.panel1.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
 
-		// create scene to pin and link animation
-		new ScrollMagic.Scene({
-				triggerElement: "#pinContainer",
-				triggerHook: "onLeave",
-				duration: "300%"
-			})
-			.setPin("#pinContainer")
-			.setTween(wipeAnimation)
-			.addTo(controller);
-	});
+        // create scene to pin and link animation
+        new ScrollMagic.Scene({
+            triggerElement: "#pinContainer",
+            triggerHook: "onLeave",
+            duration: "300%"
+        })
+                .setPin("#pinContainer")
+                .setTween(wipeAnimation)
+                .addIndicators()
+                .addTo(controller);
+    });
 </script>
 
 <script>
-        $(function(){
-           
-            // make conversation
-            $('#story').typed({
-                strings: ["Well, here we'll","Well, here we are.^2000 \nAin't much to look at, is nothing","Well, here we are. \nAin't much to look at, is it?^2000 \nCame here on a " + "Sunday"+ " night once.^1000 \nIt was actually pretty crowded.^1000 \nBut on a " + "dayOfWeek" + " " +  "timeOfDay" + " .^300 .^300 .^1000 \nI guess it's just you^1000 and me.^3000 \nHeh."],
-                stringsstops: [ 14, 44,0],
-                typeSpeed: 20,
-                backDelay: 500,
-                loop: false,
-                loopCount: false,
-            });
+    $(function () {
+
+        // make conversation
+        $('#story').typed({
+            strings: ["Well, here we'll", "Well, here we are.^2000 \nAin't much to look at, is nothing", "Well, here we are. \nAin't much to look at, is it?^2000 \nCame here on a " + "Sunday" + " night once.^1000 \nIt was actually pretty crowded.^1000 \nBut on a " + "dayOfWeek" + " " + "timeOfDay" + " .^300 .^300 .^1000 \nI guess it's just you^1000 and me.^3000 \nHeh."],
+            stringsstops: [14, 44, 0],
+            typeSpeed: 20,
+            backDelay: 500,
+            loop: false,
+            loopCount: false,
         });
-        $(document).ready(function() {
-          setTimeout(function() {
+    });
+    $(document).ready(function () {
+        setTimeout(function () {
             // send 'em packing 
             $('#kick').append("");
-          }, 30000);
-        });
-    </script>
-     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    
-        <script src="typed.js" type="text/javascript"></script>
-   
-    <script src="js/bootstrap.min.js"></script>
+        }, 30000);
+    });
+</script>
+<script src="typed.js" type="text/javascript"></script>
+<script src='js/css3-animate-it.js'></script>
+<script src="js/bootstrap.min.js"></script>
 
+<script>
+var $section=$("#myTechExpertise");
+function reloadAnimation(){
+        $('.slow.go').removeClass('go');
+       return true;
+        $('.slow').addClass('go');
+        return true;
+    
+}
+$(function() {
+
+$(document).bind('scroll', function(ev) {
+            reloadAnimation();
+        
+    });
+});
+</script>
+
+    
 </body>
 </html>
